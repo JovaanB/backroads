@@ -30,7 +30,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <div className={StyleSheet.copyright}>
+      <div className={styles.copyright}>
         copyright &copy; {new Date().getFullYear()} Backroads - agence de
         voyages{' '}
       </div>
