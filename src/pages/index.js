@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import About from '../components/Home/About';
@@ -14,9 +14,9 @@ export default ({ data }) => (
         title="Poursuivre l'exploration"
         info="Une envie de voyager ? De découvrir un autre pays ? Découvrez nos voyages à petits prix."
       >
-        <Link to="/tours" className="btn-white">
+        <AniLink fade to="/tours" className="btn-white">
           Découvrir les circuits
-        </Link>
+        </AniLink>
       </Banner>
     </StyledHero>
     <About />
