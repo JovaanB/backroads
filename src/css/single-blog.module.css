@@ -5,8 +5,7 @@
   width: 80vw;
   margin: 0 auto;
 }
-.blog h1,
-.blog h4 {
+.blog h1 {
   text-transform: capitalize;
 }
 .post {
