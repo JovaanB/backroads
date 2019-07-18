@@ -13,7 +13,7 @@ export default [
   },
   {
     path: '/blogs',
-    text: 'blogs',
+    text: 'posts',
   },
   {
     path: '/contact',
