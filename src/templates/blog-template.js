@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import styles from '../css/single-blog.module.css';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import SEO from '../components/SEO';
 
 const Blog = ({ data }) => {
   const {
@@ -17,7 +18,32 @@ const Blog = ({ data }) => {
       'embedded-asset-block': node => {
         return (
           <div>
-            <img width="400" src={node.data.target.fields.file['en-US'].url} alt="blog"/>
+            <img
+              width="400"
+              src={node.data.target.fields.file['en-US'].url}
+              alt="blog"
+            />
+          </div>
+        );
+      },
+      'embedded-entry-block': node => {
+        const { title, image, text } = node.data.target.fields;
+
+        return (
+          <div>
+            <br />
+            <br />
+            <br />
+            <h1>Autre post : {title['en-US']}</h1>
+            <img
+              width="400"
+              src={image['en-US'].fields.file['en-US'].url}
+              alt=""
+            />
+            {documentToReactComponents(text['en-US'])}
+            <br />
+            <br />
+            <br />
           </div>
         );
       },
@@ -26,6 +52,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
