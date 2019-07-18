@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'BackRoads',
-    description: 'Explorer le monde',
+    description: 'Explorer le monde - agence de voyages',
     author: '@JovaanB',
     twitterUsername: '@JovaanBc',
     image: '/defaultBcg.jpeg',
