@@ -7,8 +7,12 @@ module.exports = {
     title: 'BackRoads',
     description: 'Explorer le monde',
     author: '@JovaanB',
+    twitterUsername: '@JovaanBc',
+    image: '/defaultBcg.jpeg',
+    siteUrl: 'https://backroads-voyages.netlify.com',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
